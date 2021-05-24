@@ -23,12 +23,10 @@
 <body bgcolor="lavender">
 
     <h1>RebelStore :</h1>
-    <div class="add">
-        <a href="php/tambah.php">Tambah data toko</a>
-    </div>
-    <div class="logout">
-        <a href="logout.php">Logout</a>
-    </div>
+    <div><a href="tambah.php">Tambah data toko</a></div>
+    
+    <div><a href="logout.php">logout</a></div>
+    
     <br></br>
     <form action="" method="GET">
         <input class="black-text" type="text" name="keyword" autofocus placeholder="Masukkan keyword.." autocomplete="off">
@@ -55,10 +53,10 @@
             <tr>
                 <td><?=$i; ?></td>
                 <td>
-                    <a href="php/ubah.php?id=<?= $pcr['id'] ?>"><button>Ubah</button></a>
-                    <a href="php/hapus.php?id=<?= $pcr['id']; ?>" onclick="return confirm('Hapus Data??')"><button>Hapus</button></a>
+                    <a href="ubah.php?id=<?= $pcr['id'] ?>"><button>Ubah</button></a>
+                    <a href="hapus.php?id=<?= $pcr['id']; ?>" onclick="return confirm('Hapus Data??')"><button>Hapus</button></a>
                 </td>
-                <td><img src="assets/img/<?=$pcr["img"]; ?>"></td>
+                <td><img src="assets/img/<?= $pcr["img"]; ?>"></td>
                 <td><?=$pcr["nama"]; ?></td>
                 <td><?=$pcr["harga"]; ?></td>
                 <td><?=$pcr["kategori"]; ?></td>

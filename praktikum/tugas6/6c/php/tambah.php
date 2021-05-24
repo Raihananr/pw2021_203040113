@@ -1,25 +1,3 @@
-<?php
-session_start();
-
-if (!isset($_SESSION["username"])) {
-    header("Location: login.php");
-    exit;
-}
-require 'functions.php';
-if (isset($_POST['tambah'])) {
-    if (tambah($_POST) > 0) {
-        echo "<script>
-                    alert('Data Berhasil Ditambahkan!');
-                    document.location.href = 'admin.php';
-                </script>";
-    } else {
-        echo "<script>
-                    alert('Data Gagal ditambahkan!');
-                    document.location.href = 'admin.php';
-                </script>";
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,3 +42,20 @@ if (isset($_POST['tambah'])) {
     </form>
 </body>
 </html>
+
+<?php
+require 'functions.php';
+if (isset($_POST['tambah'])) {
+    if (tambah($_POST) > 0) {
+        echo "<script>
+                    alert('Data Berhasil Ditambahkan!');
+                    document.location.href = 'admin.php';
+                </script>";
+    } else {
+        echo "<script>
+                    alert('Data Gagal ditambahkan!');
+                    document.location.href = 'admin.php';
+                </script>";
+    }
+}
+?>

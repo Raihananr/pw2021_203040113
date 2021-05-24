@@ -41,11 +41,11 @@ if (isset($_POST['ubah'])) {
             </li>
             <li>
                 <label for="nama">Nama :</label><br>
-                <input type="text" name="nama" id="nama" required value="<?= $peacerebels['nama']; ?>"><br><br>
+                <input type="text" name="nama" id="nama" required value="<?= $pcr['nama']; ?>"><br><br>
             </li>
             <li>
                 <label for="harga">Harga :</label><br>
-                <input type="text" name="harga" id="harga" required value="<?= $peacerebels['harga']; ?>"><br><br>
+                <input type="text" name="harga" id="harga" required value="<?= $pcr['harga']; ?>"><br><br>
             </li>
             <li>
                 <label for="kategori">Kategori :</label><br>
